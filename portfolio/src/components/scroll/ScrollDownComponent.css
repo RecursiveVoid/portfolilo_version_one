@@ -1,0 +1,26 @@
+.scroll-down {
+    position: fixed;
+    bottom: 7%;
+    left: 50%;
+    right: 50%;
+}
+
+.scroll-down-text {
+    position: absolute;
+    font-size: var(--font-size);
+    --font-size: 15px;
+    left: 0;
+    padding-left: 20px;
+    margin-top: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.scroll-down-image {
+    position: absolute;
+    margin-right: -20px;
+    right: 0;
+    width: 25px;
+    height: 25px;
+}
