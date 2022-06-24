@@ -64,7 +64,7 @@ function animate() {
     backgroundColor.b
   }, ${backgroundColor.a})`
   // @ts-ignore
-  c.fillRect(0, 0, canvas.width, canvas.height)
+  c.clearRect(0, 0, canvas.width, canvas.height)
 // @ts-ignore
   c.beginPath()
   // @ts-ignore
