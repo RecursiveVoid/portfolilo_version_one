@@ -8,6 +8,7 @@ import ScrollDownComponent from "./components/scroll/ScrollDownComponent";
 import gsap from 'gsap';
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import scrollDownImage from './arrow-down.png';
+import CategoryButtonComponent from "./components/category/CategoryButtonComponent";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,6 +43,7 @@ animate()
 
 function App() {
   const nameTitleRef = useRef(null);
+  const categoryDivRef = useRef(null);
   useEffect(() => {
     const nameTitle = nameTitleRef.current;
     gsap.to(nameTitle, {
@@ -55,6 +57,16 @@ function App() {
       right: -50,
       scale: 0.5,
     });
+    const categoryDiv = categoryDivRef.current;
+    gsap.to(categoryDiv, {
+      scrollTrigger: {
+        trigger: categoryDiv,
+        start: 200,
+        end: 300,
+        scrub: 1.5,
+      },
+      autoAlpha: 1,
+    });
   });
   return (
     <div className="App">
@@ -65,6 +77,17 @@ function App() {
           </div>
           <div className="Title-description">
             <TitleComponent text={'Sound Designer'} size={'30px'} id={'title'} tween={{delay: 1.0, duration: 2.0, ease: 'sine.easeInOut'}}/>
+          </div>
+        </div>
+        <div className= 'category-div-main' ref={categoryDivRef}>
+          <div className= 'category-div-about'>
+          <CategoryButtonComponent text='ABOUT'></CategoryButtonComponent>
+          </div>
+          <div className= 'category-div-work'>
+          <CategoryButtonComponent text='WORK'></CategoryButtonComponent>
+          </div>
+          <div className= 'category-div-contact'>
+          <CategoryButtonComponent text='CONTACT'></CategoryButtonComponent>
           </div>
         </div>
         <ScrollDownComponent text={'Scroll Down'}

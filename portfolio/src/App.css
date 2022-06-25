@@ -3,6 +3,30 @@
   background-color: #202021;
 }
 
+.category-div-main {
+  opacity: 0;
+  right: 2%;
+  top: 15%;
+  position: fixed;
+  top: 100px;
+  right: 30px;
+}
+
+.category-div-about {
+  position: absolute;
+  padding: 0px 0px;
+}
+
+.category-div-work {
+  position: absolute;
+  padding: 70px 0px;
+}
+
+.category-div-contact {
+  position: absolute;
+  margin: 140px 0px;
+}
+
 .Title {
   color: lightgray;
   position: fixed;
@@ -45,6 +69,30 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  .category-div-main {
+    opacity: 0;
+    right: 5%;
+    top: 15%;
+    position: fixed;
+    top: 100px;
+    right: 20px;
+  }
+
+  .category-div-about {
+    position: absolute;
+    padding: 0px 0px;
+  }
+
+  .category-div-work {
+    position: absolute;
+    padding: 50px 0px;
+  }
+
+  .category-div-contact {
+    position: absolute;
+    margin: 100px 0px;
   }
 
 }
