@@ -61,11 +61,13 @@ class ScrollDownComponent extends React.Component<ScrollDownConfig> {
         const duration = tweenConfig.duration || 0.0;
         const delay = tweenConfig.delay || 0.0;
         const ease = tweenConfig.ease || 'linear.none';
-        gsap.fromTo(
+        const tween = gsap.fromTo(
           element,
           {opacity: 0},
             {opacity: 1.0, duration , ease, delay}
         );
+        // TODO this is funny to implement but i will create timeout intervals in future
+        tween.repeat(9999);
       }
     }
 
