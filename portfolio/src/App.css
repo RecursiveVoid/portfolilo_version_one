@@ -27,6 +27,18 @@
   margin: 140px 0px;
 }
 
+.category-div-instagram {
+  position: absolute;
+  padding: 230px 0px;
+  right: 5px;
+}
+
+.category-div-spotify {
+  position: absolute;
+  padding: 280px 0px;
+  right: 5px;
+}
+
 .Title {
   color: lightgray;
   position: fixed;
@@ -93,6 +105,18 @@
   .category-div-contact {
     position: absolute;
     margin: 100px 0px;
+  }
+
+  .category-div-instagram {
+    position: absolute;
+    padding: 170px 0px;
+    right: 10px;
+  }
+
+  .category-div-spotify {
+    position: absolute;
+    padding: 230px 0px;
+    right: 10px;
   }
 
 }

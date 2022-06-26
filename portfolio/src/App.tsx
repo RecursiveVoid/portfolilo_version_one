@@ -7,8 +7,11 @@ import ScrollDownComponent from "./components/scroll/ScrollDownComponent";
 
 import gsap from 'gsap';
 import {ScrollTrigger} from "gsap/ScrollTrigger";
-import scrollDownImage from './arrow-down.png';
 import CategoryButtonComponent from "./components/category/CategoryButtonComponent";
+
+import scrollDownImage from './arrow-down.png';
+import instagramImage from './instagram.svg';
+import spotifyImage from './spotify.svg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -88,6 +91,12 @@ function App() {
           </div>
           <div className= 'category-div-contact'>
           <CategoryButtonComponent text='CONTACT'></CategoryButtonComponent>
+          </div>
+          <div className= 'category-div-instagram'>
+            <CategoryButtonComponent img={instagramImage}></CategoryButtonComponent>
+          </div>
+          <div className= 'category-div-spotify'>
+            <CategoryButtonComponent img={spotifyImage}></CategoryButtonComponent>
           </div>
         </div>
         <ScrollDownComponent text={'Scroll Down'}

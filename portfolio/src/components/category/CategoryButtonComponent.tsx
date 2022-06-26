@@ -15,12 +15,22 @@ class CategoryButtonComponent extends React.Component<CategoryButtonConfig> {
 
   render() {
       const id = this.props.id || 'category-button';
-    return (
-      <div className='category-text-div'>
-        {this.props.text}
-          <button className='category-button' id = {id}></button>
-      </div>
-    );
+      if(this.props.img) {
+        return (
+            <div className='category-text-div'>
+              {this.props.text}
+              <img className='category-img' id = {id} src = {this.props.img}/>
+            </div>
+        );
+      } else {
+        return (
+            <div className='category-text-div'>
+              {this.props.text}
+              <button className='category-button' id = {id}></button>
+            </div>
+        );
+      }
+
   }
 }
 
