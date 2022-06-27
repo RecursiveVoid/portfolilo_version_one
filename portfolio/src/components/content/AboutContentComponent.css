@@ -1,0 +1,26 @@
+.about-content {
+    position: fixed;
+}
+
+.about-content-title {
+    position: absolute;
+    font-size: 100px;
+    padding-left: 100px;
+    margin-top: 50px;
+    opacity: 50%;
+}
+
+.about-content-img {
+    position: absolute;
+    max-height: 800px;
+    max-width: 800px;
+    opacity: 50%;
+}
+
+.about-content-description {
+    position: fixed;
+    padding-right: 100px;
+    left: 800px;
+    margin-top: 200px;
+
+}

@@ -42,10 +42,10 @@
 .Title {
   color: lightgray;
   position: fixed;
+  margin: 800px 1px 200px;
 }
 
 .Title-name {
-  margin-top: 200px;
   color: lightgray;
   white-space: nowrap;
   overflow: hidden;
@@ -71,6 +71,14 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.about-div {
+  opacity: 0;
+  position: fixed;
+  left: 2%;
+  top: 5%;
+  position: fixed;
 }
 
 @media only screen and (max-width: 465px) {

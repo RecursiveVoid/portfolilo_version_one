@@ -12,6 +12,8 @@ import CategoryButtonComponent from "./components/category/CategoryButtonCompone
 import scrollDownImage from './arrow-down.png';
 import instagramImage from './instagram.svg';
 import spotifyImage from './spotify.svg';
+import profilePic from './profilePicture.png';
+import AboutContentComponent from "./components/content/AboutContentComponent";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,25 +49,41 @@ animate()
 function App() {
   const nameTitleRef = useRef(null);
   const categoryDivRef = useRef(null);
+  const aboutContent = useRef(null);
   useEffect(() => {
     const nameTitle = nameTitleRef.current;
-    gsap.to(nameTitle, {
+    const titleTween = gsap.fromTo(nameTitle,{
+      marginTop: 200,
+      position: 'fixed',
+
+    }, {
       scrollTrigger: {
         trigger: nameTitle,
         start: 0,
         end: 300,
         scrub: true,
       },
-      top: -100,
+      top: -130,
       right: -50,
       scale: 0.5,
     });
+    titleTween.invalidate();
     const categoryDiv = categoryDivRef.current;
     gsap.to(categoryDiv, {
       scrollTrigger: {
         trigger: categoryDiv,
         start: 200,
         end: 300,
+        scrub: 1.5,
+      },
+      autoAlpha: 1,
+    });
+    const aboutDiv = aboutContent.current;
+    gsap.to(aboutDiv, {
+      scrollTrigger: {
+        trigger: aboutDiv,
+        start: 400,
+        end: 500,
         scrub: 1.5,
       },
       autoAlpha: 1,
@@ -98,6 +116,9 @@ function App() {
           <div className= 'category-div-spotify'>
             <CategoryButtonComponent img={spotifyImage}></CategoryButtonComponent>
           </div>
+        </div>
+        <div className='about-div' ref={aboutContent}>
+          <AboutContentComponent img={profilePic} title='About' description='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."'></AboutContentComponent>
         </div>
         <ScrollDownComponent text={'Scroll Down'}
                              id={'scroll-down'}
